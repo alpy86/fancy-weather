@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"> -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <title>Fancy-weather</title>
+</head>
+
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <div class="wrapper-map" id='map'></div> 
+            <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWxweTg2IiwiYSI6ImNrM2l6Y2dxODBjcWIzbm9jOXJncGJ3YzMifQ.bK-wG1P-1g5YLwEJP3KAPA';
+    let map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+    center: [27.6 , 53.9], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+</script>
+            
+        <!-- <div class="tools">
+            <ul class="tools__list">
+                <li class="list--item fill" id="list-item-fill">
+                    <i class="tools fas fa-fill-drip"></i>
+                    <span class="item--text">Paint bucket</span>
+                </li>
+                <li class="list--item choose" id="list-item-choose">
+                    <i class="tools fas fa-eye-dropper"></i>
+                    <span class="item--text">Choose color</span>
+                </li>
+                <li class="list--item pencil" id="list-item-pencil">
+                    <i class="tools fas fa-pencil-alt"></i>
+                    <span class="item--text">Pencil</span>
+                </li>
+                <li class="list--item no-use">
+                    <i class="tools fas fa-arrows-alt"></i>
+                    <span class="item--text">Move</span>
+                </li>
+                <li class="list--item no-use">
+                    <i class="tools fas fa-exchange-alt"></i>
+                    <span class="item--text">Transform</span>
+                </li>
+            </ul>
+            <ul class="tools__list">
+                <li class="list--item">
+                    <label class="label-color" for="select-color">
+                        <input type="color" value="#008000" name="select-color" class="select-color"
+                            id="select-color-canvas">
+                        Current color
+                    </label>
+                </li>
+                <li class="list--item prev">
+                    <span class="item-color">
+                        <span class="color-circle prev" id="color-prev"></span>
+                        Prev color
+                    </span>
+                </li>
+                <li class="list--item">
+                    <span class="item-color">
+                        <span class="color-circle red" id="color-red"></span>
+                        red
+                    </span>
+                </li>
+                <li class="list--item">
+                    <span class="item-color">
+                        <span class="color-circle blue" id="color-blue"></span>
+                        blue
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="field">
+            <div class="load-location">
+                <button class="canvas-btn" id="load-img">Load</button>
+                <label class="label-location" for="select-location">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="select-location" name="select-location" id="select-location">
+                </label>
+                <button class="canvas-btn" id="bw-img">B&W</button>
+            </div>
+            <canvas class="canvas" id="canvas" width="512" height="512"></canvas>
+            <div class="canvas-btn-wrapper">
+                <button class="canvas-btn" id="clear-canvas">clear canvas</button>
+                <label class="label-resizing" for="image-resizing">
+                    <span>Image resizing</span>
+                    <input type="range" class="image-resizing" id="image-resizing" name="image-resizing" min="128"
+                        max="512" step="128" value="512">
+                </label>
+                <button class="canvas-btn" id="full-fill-canvas">full fill with selected color</button>
+            </div>
+            <div class="error-load" id="error-load">
+                <span>Error. You need to upload an image using the button and select a city</span>
+                <button class="btn-error" id="btn-error">OK</button>
+            </div>
+        </div> -->
+
+    </main>
+    
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
